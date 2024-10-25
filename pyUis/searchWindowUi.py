@@ -59,7 +59,7 @@ class Ui_resiltTable(object):
         self.ui.CarOwnerTxt.setText(sendToForm_Owner.nameLastname)
         self.ui.UseTxt.setText(sendToForm_CarInfo.Useage)
         self.ui.InfTxt.setText(sendToForm_CarInfo.information)
-        self.ui.CarColorCondTxt.setText(sendToForm_CarInfo.ColorCond)
+        self.ui.Motor.setText(sendToForm_CarInfo.Motor)
         self.ui.GirboxCondTxt.setText(sendToForm_CarInfo.MotorGirboxCond)
         self.ui.OptionTxt.setText(sendToForm_CarInfo.OptionCond)
         self.ui.ShasiCondTxt.setText(sendToForm_CarInfo.ShasiCond)

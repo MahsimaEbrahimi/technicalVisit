@@ -17,7 +17,7 @@ class CarinfoClass:
                     CarinfoModel.ShasiCond == carInfoModel_instance.ShasiCond.strip(),
                     CarinfoModel.OptionCond == carInfoModel_instance.OptionCond.strip(),
                     CarinfoModel.MotorGirboxCond == carInfoModel_instance.MotorGirboxCond.strip(),
-                    CarinfoModel.ColorCond == carInfoModel_instance.ColorCond.strip(),
+                    CarinfoModel.Motor == carInfoModel_instance.Motor.strip(),
                     CarinfoModel.information == carInfoModel_instance.information.strip(),
                     CarinfoModel.Useage == carInfoModel_instance.Useage.strip(),
                     CarinfoModel.CarType ==carInfoModel_instance.CarType.strip(),

@@ -11,7 +11,7 @@ class CarinfoModel(Base):
         ShasiCond=Column(Unicode,nullable=True)
         OptionCond=Column(Unicode,nullable=True)
         MotorGirboxCond=Column(Unicode,nullable=True)
-        ColorCond=Column(Unicode,nullable=True)
+        Motor=Column(Unicode,nullable=True)
         information=Column(Unicode,nullable=True)
         Useage=Column(Unicode(50),nullable=True)
         CarType=Column(Unicode(50),nullable=False)

@@ -63,13 +63,13 @@ class Ui_MainWindow(object):
                  continue
  
              i.clear()
-             if i==self.ShasiCondTxt:
+             if i==self.girbox:
                 i.setText("")
              if i==self.OptionTxt:
                 i.setText("")
-             if i==self.GirboxCondTxt:
+             if i==self.blockingAndSuspention:
                 i.setText("")
-             if i==self.CarColorCondTxt:
+             if i==self.Motor:
                 i.setText("")  
 
     # Function to create the PDF in memory
@@ -91,10 +91,10 @@ class Ui_MainWindow(object):
     #             f'''پلاک: {self.ThirdPart_id_2.toPlainText()}/{self.FourthPart_id.toPlainText()}{self.secoundPart_id.toPlainText()}{self.firstPart_id.toPlainText()}''',
     #             f'''مالک: {self.CarOwnerTxt.toPlainText()} \t 
     #                 تلفن: {self.PhoneTxt.toPlainText()}''',
-    #             f'وضعیت رنگ بدنه: {self.CarColorCondTxt.toPlainText()}',
-    #             f'وضعیت موتور و گیربکس: {self.GirboxCondTxt.toPlainText()}',
+    #             f'وضعیت رنگ بدنه: {self.Motor.toPlainText()}',
+    #             f'وضعیت موتور و گیربکس: {self.blockingAndSuspention.toPlainText()}',
     #             f'وضعیت آپشن ها: {self.OptionTxt.toPlainText()}',
-    #             f'وضعیت شاسی: {self.ShasiCondTxt.toPlainText()}',
+    #             f'وضعیت شاسی: {self.girbox.toPlainText()}',
     #             f'توضیحات: {self.InfTxt.toPlainText()}'
     #     ]
 
@@ -116,8 +116,8 @@ class Ui_MainWindow(object):
         PrintManager.Create_html('blueprint.html', 'output.html', self.DateTxt.text(), 
                                  f'''{self.ThirdPart_id_2.toPlainText()}/{self.FourthPart_id.toPlainText()}{self.secoundPart_id.toPlainText()}{self.firstPart_id.toPlainText()}''',
                                  self.ShasiTxt.toPlainText(), self.CarTypeComb.currentText(), self.CarColorComb.currentText(),
-                                 self.CarOwnerTxt.toPlainText(), self.CarColorCondTxt.toPlainText(),
-                                 self.ShasiCondTxt.toPlainText(), self.GirboxCondTxt.toPlainText(),
+                                 self.CarOwnerTxt.toPlainText(), self.Motor.toPlainText(),
+                                 self.girbox.toPlainText(), self.blockingAndSuspention.toPlainText(),
                                  self.OptionTxt.toPlainText(), self.InfTxt.toPlainText())
         PrintManager.Show_in_browser('output.html')
         # PrintManager.Delete_html('output.html')
@@ -483,14 +483,14 @@ class Ui_MainWindow(object):
         self.OptionTxt.setFont(font)
         self.OptionTxt.setObjectName("OptionTxt")
         self.gridLayout_2.addWidget(self.OptionTxt, 2, 1, 1, 1)
-        self.RemoveCarColorCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.CarColorCondTxt.clear())
+        self.RemoveMotorBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.Motor.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.RemoveCarColorCondBtn.setFont(font)
-        self.RemoveCarColorCondBtn.setObjectName("RemoveCarColorCondBtn")
-        self.gridLayout_2.addWidget(self.RemoveCarColorCondBtn, 0, 0, 1, 1)
-        self.ShasiCondTxt = QtWidgets.QTextEdit(self.frame_6)
-        self.ShasiCondTxt.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.RemoveMotorBtn.setFont(font)
+        self.RemoveMotorBtn.setObjectName("RemoveMotorBtn")
+        self.gridLayout_2.addWidget(self.RemoveMotorBtn, 0, 0, 1, 1)
+        self.girbox = QtWidgets.QTextEdit(self.frame_6)
+        self.girbox.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -501,26 +501,26 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        self.ShasiCondTxt.setPalette(palette)
+        self.girbox.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.ShasiCondTxt.setFont(font)
-        self.ShasiCondTxt.setObjectName("ShasiCondTxt")
-        self.gridLayout_2.addWidget(self.ShasiCondTxt, 3, 1, 1, 1)
+        self.girbox.setFont(font)
+        self.girbox.setObjectName("girbox")
+        self.gridLayout_2.addWidget(self.girbox, 3, 1, 1, 1)
         self.RemoveOptionBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.OptionTxt.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemoveOptionBtn.setFont(font)
         self.RemoveOptionBtn.setObjectName("RemoveOptionBtn")
         self.gridLayout_2.addWidget(self.RemoveOptionBtn, 2, 0, 1, 1)
-        self.RemoveShasiCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.ShasiCondTxt.clear())
+        self.RemoveShasiCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.girbox.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemoveShasiCondBtn.setFont(font)
         self.RemoveShasiCondBtn.setObjectName("RemoveShasiCondBtn")
         self.gridLayout_2.addWidget(self.RemoveShasiCondBtn, 3, 0, 1, 1)
-        self.CarColorCondTxt = QtWidgets.QTextEdit(self.frame_6)
-        self.CarColorCondTxt.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.Motor = QtWidgets.QTextEdit(self.frame_6)
+        self.Motor.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -531,14 +531,14 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        self.CarColorCondTxt.setPalette(palette)
+        self.Motor.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.CarColorCondTxt.setFont(font)
-        self.CarColorCondTxt.setObjectName("CarColorCondTxt")
-        self.gridLayout_2.addWidget(self.CarColorCondTxt, 0, 1, 1, 1)
-        self.GirboxCondTxt = QtWidgets.QTextEdit(self.frame_6)
-        self.GirboxCondTxt.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.Motor.setFont(font)
+        self.Motor.setObjectName("Motor")
+        self.gridLayout_2.addWidget(self.Motor, 0, 1, 1, 1)
+        self.blockingAndSuspention = QtWidgets.QTextEdit(self.frame_6)
+        self.blockingAndSuspention.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -549,12 +549,12 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        self.GirboxCondTxt.setPalette(palette)
+        self.blockingAndSuspention.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.GirboxCondTxt.setFont(font)
-        self.GirboxCondTxt.setObjectName("GirboxCondTxt")
-        self.gridLayout_2.addWidget(self.GirboxCondTxt, 1, 1, 1, 1)
+        self.blockingAndSuspention.setFont(font)
+        self.blockingAndSuspention.setObjectName("blockingAndSuspention")
+        self.gridLayout_2.addWidget(self.blockingAndSuspention, 1, 1, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.frame_6)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -567,7 +567,7 @@ class Ui_MainWindow(object):
         self.RemoveInfBtn.setFont(font)
         self.RemoveInfBtn.setObjectName("RemoveInfBtn")
         self.gridLayout_2.addWidget(self.RemoveInfBtn, 5, 0, 1, 1)
-        self.RemoveGirboxCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.GirboxCondTxt.clear())
+        self.RemoveGirboxCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.blockingAndSuspention.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemoveGirboxCondBtn.setFont(font)
@@ -630,10 +630,10 @@ class Ui_MainWindow(object):
         Ui_MainWindow.component_Lst.append(self.PhoneTxt)
         Ui_MainWindow.component_Lst.append(self.InfTxt)
         Ui_MainWindow.component_Lst.append(self.UseTxt)
-        Ui_MainWindow.component_Lst.append(self.CarColorCondTxt)
+        Ui_MainWindow.component_Lst.append(self.Motor)
         Ui_MainWindow.component_Lst.append(self.OptionTxt)
-        Ui_MainWindow.component_Lst.append(self.GirboxCondTxt)
-        Ui_MainWindow.component_Lst.append(self.ShasiCondTxt)
+        Ui_MainWindow.component_Lst.append(self.blockingAndSuspention)
+        Ui_MainWindow.component_Lst.append(self.girbox)
         Ui_MainWindow.component_Lst.append(self.CarTypeComb)
         Ui_MainWindow.component_Lst.append(self.CarColorComb)
 
@@ -699,25 +699,25 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"))
-        self.RemoveCarColorCondBtn.setText(_translate("MainWindow", "پاك كردن"))
-        self.ShasiCondTxt.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.RemoveMotorBtn.setText(_translate("MainWindow", "پاك كردن"))
+        self.girbox.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"))
         self.RemoveOptionBtn.setText(_translate("MainWindow", "پاك كردن"))
         self.RemoveShasiCondBtn.setText(_translate("MainWindow", "پاك كردن"))
-        self.CarColorCondTxt.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.Motor.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"))
-        self.GirboxCondTxt.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.blockingAndSuspention.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"))
-        self.label_15.setText(_translate("MainWindow", "وضعيت آپشن ها:"))
+        self.label_15.setText(_translate("MainWindow", "آپشن ها:"))
         self.RemoveInfBtn.setText(_translate("MainWindow", "پاك كردن"))
         self.RemoveGirboxCondBtn.setText(_translate("MainWindow", "پاك كردن"))
         self.label_17.setText(_translate("MainWindow", "توضيحات:"))

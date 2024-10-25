@@ -60,7 +60,7 @@ class FormMethod:
                             ShasiCond=self.Mainobj.ShasiCondTxt.toPlainText(),
                             OptionCond=self.Mainobj.OptionTxt.toPlainText(),
                             MotorGirboxCond=self.Mainobj.GirboxCondTxt.toPlainText(),
-                            ColorCond=self.Mainobj.CarColorCondTxt.toPlainText(),
+                            Motor=self.Mainobj.Motor.toPlainText(),
                             information =self.Mainobj.InfTxt.toPlainText(),
                             Useage=self.Mainobj.UseTxt.toPlainText(), 
                             CarType=self.Mainobj.CarTypeComb.currentText(),
