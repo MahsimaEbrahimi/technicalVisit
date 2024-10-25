@@ -57,7 +57,7 @@ class FormMethod:
                     if self.error==True:  
                         CarInfoModelInstance=CarinfoModel(            
                             CarColor=self.Mainobj.CarColorComb.currentText(),
-                            ShasiCond=self.Mainobj.ShasiCondTxt.toPlainText(),
+                            girbox=self.Mainobj.girbox.toPlainText(),
                             OptionCond=self.Mainobj.OptionTxt.toPlainText(),
                             MotorGirboxCond=self.Mainobj.GirboxCondTxt.toPlainText(),
                             Motor=self.Mainobj.Motor.toPlainText(),

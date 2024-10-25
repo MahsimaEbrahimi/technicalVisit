@@ -62,7 +62,7 @@ class Ui_resiltTable(object):
         self.ui.Motor.setText(sendToForm_CarInfo.Motor)
         self.ui.GirboxCondTxt.setText(sendToForm_CarInfo.MotorGirboxCond)
         self.ui.OptionTxt.setText(sendToForm_CarInfo.OptionCond)
-        self.ui.ShasiCondTxt.setText(sendToForm_CarInfo.ShasiCond)
+        self.ui.girbox.setText(sendToForm_CarInfo.girbox)
         self.ui.DateTxt.setText(str(sendToForm_ROwner.Date))
         res=self.ui.CarTypeComb.findText(sendToForm_CarInfo.CarType)
         if res!=-1:

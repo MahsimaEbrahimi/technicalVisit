@@ -14,7 +14,7 @@ class CarinfoClass:
         stmt = select(CarinfoModel.Thekey).where(
                 and_(
                     CarinfoModel.CarColor == carInfoModel_instance.CarColor.strip(),
-                    CarinfoModel.ShasiCond == carInfoModel_instance.ShasiCond.strip(),
+                    CarinfoModel.girbox == carInfoModel_instance.girbox.strip(),
                     CarinfoModel.OptionCond == carInfoModel_instance.OptionCond.strip(),
                     CarinfoModel.MotorGirboxCond == carInfoModel_instance.MotorGirboxCond.strip(),
                     CarinfoModel.Motor == carInfoModel_instance.Motor.strip(),

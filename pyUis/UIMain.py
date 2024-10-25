@@ -513,12 +513,12 @@ class Ui_MainWindow(object):
         self.RemoveOptionBtn.setFont(font)
         self.RemoveOptionBtn.setObjectName("RemoveOptionBtn")
         self.gridLayout_2.addWidget(self.RemoveOptionBtn, 2, 0, 1, 1)
-        self.RemoveShasiCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.girbox.clear())
+        self.RemovegirboxBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.girbox.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.RemoveShasiCondBtn.setFont(font)
-        self.RemoveShasiCondBtn.setObjectName("RemoveShasiCondBtn")
-        self.gridLayout_2.addWidget(self.RemoveShasiCondBtn, 3, 0, 1, 1)
+        self.RemovegirboxBtn.setFont(font)
+        self.RemovegirboxBtn.setObjectName("RemovegirboxBtn")
+        self.gridLayout_2.addWidget(self.RemovegirboxBtn, 3, 0, 1, 1)
         self.Motor = QtWidgets.QTextEdit(self.frame_6)
         self.Motor.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
@@ -706,7 +706,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"))
         self.RemoveOptionBtn.setText(_translate("MainWindow", "پاك كردن"))
-        self.RemoveShasiCondBtn.setText(_translate("MainWindow", "پاك كردن"))
+        self.RemovegirboxBtn.setText(_translate("MainWindow", "پاك كردن"))
         self.Motor.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

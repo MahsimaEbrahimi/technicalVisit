@@ -8,7 +8,7 @@ class CarinfoModel(Base):
         Thekey=Column(Integer,primary_key=True,nullable=False,autoincrement=True)
         CarColor=Column(Unicode(50),nullable=False)
         CarColor.description="رنگ ماشین"
-        ShasiCond=Column(Unicode,nullable=True)
+        girbox=Column(Unicode,nullable=True)
         OptionCond=Column(Unicode,nullable=True)
         MotorGirboxCond=Column(Unicode,nullable=True)
         Motor=Column(Unicode,nullable=True)
