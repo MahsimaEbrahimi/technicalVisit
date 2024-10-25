@@ -63,11 +63,11 @@ class Ui_MainWindow(object):
                  continue
  
              i.clear()
-             if i==self.girbox:
+             if i==self.blockingAndSuspention:
                 i.setText("")
              if i==self.OptionTxt:
                 i.setText("")
-             if i==self.blockingAndSuspention:
+             if i==self.girbox:
                 i.setText("")
              if i==self.Motor:
                 i.setText("")  
@@ -92,9 +92,9 @@ class Ui_MainWindow(object):
     #             f'''مالک: {self.CarOwnerTxt.toPlainText()} \t 
     #                 تلفن: {self.PhoneTxt.toPlainText()}''',
     #             f'وضعیت رنگ بدنه: {self.Motor.toPlainText()}',
-    #             f'وضعیت موتور و گیربکس: {self.blockingAndSuspention.toPlainText()}',
+    #             f'وضعیت موتور و گیربکس: {self.girbox.toPlainText()}',
     #             f'وضعیت آپشن ها: {self.OptionTxt.toPlainText()}',
-    #             f'وضعیت شاسی: {self.girbox.toPlainText()}',
+    #             f'وضعیت شاسی: {self.blockingAndSuspention.toPlainText()}',
     #             f'توضیحات: {self.InfTxt.toPlainText()}'
     #     ]
 
@@ -489,8 +489,8 @@ class Ui_MainWindow(object):
         self.RemoveMotorBtn.setFont(font)
         self.RemoveMotorBtn.setObjectName("RemoveMotorBtn")
         self.gridLayout_2.addWidget(self.RemoveMotorBtn, 0, 0, 1, 1)
-        self.girbox = QtWidgets.QTextEdit(self.frame_6)
-        self.girbox.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.blockingAndSuspention = QtWidgets.QTextEdit(self.frame_6)
+        self.blockingAndSuspention.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -501,19 +501,19 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        self.girbox.setPalette(palette)
+        self.blockingAndSuspention.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.girbox.setFont(font)
-        self.girbox.setObjectName("girbox")
-        self.gridLayout_2.addWidget(self.girbox, 3, 1, 1, 1)
+        self.blockingAndSuspention.setFont(font)
+        self.blockingAndSuspention.setObjectName("blockingAndSuspention")
+        self.gridLayout_2.addWidget(self.blockingAndSuspention, 3, 1, 1, 1)
         self.RemoveOptionBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.OptionTxt.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemoveOptionBtn.setFont(font)
         self.RemoveOptionBtn.setObjectName("RemoveOptionBtn")
         self.gridLayout_2.addWidget(self.RemoveOptionBtn, 2, 0, 1, 1)
-        self.RemovegirboxBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.girbox.clear())
+        self.RemovegirboxBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.blockingAndSuspention.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemovegirboxBtn.setFont(font)
@@ -537,8 +537,8 @@ class Ui_MainWindow(object):
         self.Motor.setFont(font)
         self.Motor.setObjectName("Motor")
         self.gridLayout_2.addWidget(self.Motor, 0, 1, 1, 1)
-        self.blockingAndSuspention = QtWidgets.QTextEdit(self.frame_6)
-        self.blockingAndSuspention.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.girbox = QtWidgets.QTextEdit(self.frame_6)
+        self.girbox.setMaximumSize(QtCore.QSize(16777215, 50))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -549,12 +549,12 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(240, 217, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        self.blockingAndSuspention.setPalette(palette)
+        self.girbox.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.blockingAndSuspention.setFont(font)
-        self.blockingAndSuspention.setObjectName("blockingAndSuspention")
-        self.gridLayout_2.addWidget(self.blockingAndSuspention, 1, 1, 1, 1)
+        self.girbox.setFont(font)
+        self.girbox.setObjectName("girbox")
+        self.gridLayout_2.addWidget(self.girbox, 1, 1, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.frame_6)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -567,7 +567,7 @@ class Ui_MainWindow(object):
         self.RemoveInfBtn.setFont(font)
         self.RemoveInfBtn.setObjectName("RemoveInfBtn")
         self.gridLayout_2.addWidget(self.RemoveInfBtn, 5, 0, 1, 1)
-        self.RemoveGirboxCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.blockingAndSuspention.clear())
+        self.RemoveGirboxCondBtn = QtWidgets.QPushButton(self.frame_6,clicked=lambda:self.girbox.clear())
         font = QtGui.QFont()
         font.setPointSize(10)
         self.RemoveGirboxCondBtn.setFont(font)
@@ -632,8 +632,8 @@ class Ui_MainWindow(object):
         Ui_MainWindow.component_Lst.append(self.UseTxt)
         Ui_MainWindow.component_Lst.append(self.Motor)
         Ui_MainWindow.component_Lst.append(self.OptionTxt)
-        Ui_MainWindow.component_Lst.append(self.blockingAndSuspention)
         Ui_MainWindow.component_Lst.append(self.girbox)
+        Ui_MainWindow.component_Lst.append(self.blockingAndSuspention)
         Ui_MainWindow.component_Lst.append(self.CarTypeComb)
         Ui_MainWindow.component_Lst.append(self.CarColorComb)
 
