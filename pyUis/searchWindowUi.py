@@ -60,7 +60,7 @@ class Ui_resiltTable(object):
         self.ui.UseTxt.setText(sendToForm_CarInfo.Useage)
         self.ui.InfTxt.setText(sendToForm_CarInfo.information)
         self.ui.Motor.setText(sendToForm_CarInfo.Motor)
-        self.ui.GirboxCondTxt.setText(sendToForm_CarInfo.blockingAndSuspention)
+        self.ui.blockingAndSuspention.setText(sendToForm_CarInfo.blockingAndSuspention)
         self.ui.OptionTxt.setText(sendToForm_CarInfo.OptionCond)
         self.ui.girbox.setText(sendToForm_CarInfo.girbox)
         self.ui.DateTxt.setText(str(sendToForm_ROwner.Date))

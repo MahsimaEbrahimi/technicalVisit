@@ -10,7 +10,7 @@ class CarinfoModel(Base):
         CarColor.description="رنگ ماشین"
         girbox=Column(Unicode,nullable=True)
         OptionCond=Column(Unicode,nullable=True)
-        MotorGirboxCond=Column(Unicode,nullable=True)
+        blockingAndSuspention=Column(Unicode,nullable=True)
         Motor=Column(Unicode,nullable=True)
         information=Column(Unicode,nullable=True)
         Useage=Column(Unicode(50),nullable=True)
