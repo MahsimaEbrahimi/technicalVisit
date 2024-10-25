@@ -16,7 +16,7 @@ class CarinfoClass:
                     CarinfoModel.CarColor == carInfoModel_instance.CarColor.strip(),
                     CarinfoModel.girbox == carInfoModel_instance.girbox.strip(),
                     CarinfoModel.OptionCond == carInfoModel_instance.OptionCond.strip(),
-                    CarinfoModel.MotorGirboxCond == carInfoModel_instance.MotorGirboxCond.strip(),
+                    CarinfoModel.blockingAndSuspention == carInfoModel_instance.blockingAndSuspention.strip(),
                     CarinfoModel.Motor == carInfoModel_instance.Motor.strip(),
                     CarinfoModel.information == carInfoModel_instance.information.strip(),
                     CarinfoModel.Useage == carInfoModel_instance.Useage.strip(),

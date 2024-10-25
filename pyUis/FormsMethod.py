@@ -59,7 +59,7 @@ class FormMethod:
                             CarColor=self.Mainobj.CarColorComb.currentText(),
                             girbox=self.Mainobj.girbox.toPlainText(),
                             OptionCond=self.Mainobj.OptionTxt.toPlainText(),
-                            MotorGirboxCond=self.Mainobj.GirboxCondTxt.toPlainText(),
+                            blockingAndSuspention=self.Mainobj.GirboxCondTxt.toPlainText(),
                             Motor=self.Mainobj.Motor.toPlainText(),
                             information =self.Mainobj.InfTxt.toPlainText(),
                             Useage=self.Mainobj.UseTxt.toPlainText(), 
