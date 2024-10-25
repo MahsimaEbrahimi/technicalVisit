@@ -64,13 +64,13 @@ class Ui_MainWindow(object):
  
              i.clear()
              if i==self.ShasiCondTxt:
-                i.setText("شاسی و سینی های عقب و جلو سالم است")
+                i.setText("")
              if i==self.OptionTxt:
-                i.setText("تمام آپشن ها فعال میباشد")
+                i.setText("")
              if i==self.GirboxCondTxt:
-                i.setText("موتور و گیربکس پلمپ میباشد")
+                i.setText("")
              if i==self.CarColorCondTxt:
-                i.setText("اتوموبیل فاقد رنگ شدگی میباشد")  
+                i.setText("")  
 
     # Function to create the PDF in memory
     # def create_pdf(self):
