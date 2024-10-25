@@ -830,7 +830,7 @@ p, li { white-space: pre-wrap; }
              </font>
             </property>
             <property name="text">
-             <string>وضعيت رنگ بدنه:</string>
+             <string>موتور:</string>
             </property>
            </widget>
           </item>
