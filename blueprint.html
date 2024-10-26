@@ -32,8 +32,11 @@
             text-align: center;
         }
 
+        .header-img {
+            width: 100%;
+        }
+
         .main {
-            padding-top: 2.5cm;
             border: 1px solid rgb(97, 97, 97);
         }
 
@@ -44,7 +47,7 @@
             position: relative;
             margin: 0 1.5rem;
         }
-        
+
         .seperator::before {
             content: '';
             position: absolute;
@@ -84,7 +87,6 @@
 
         .bold {
             font-weight: bold;
-            ;
         }
 
         button {
@@ -122,6 +124,9 @@
 <body>
     <div class="container">
         <div class="main">
+            <div class="header">
+                <img class="header-img" src="blueprintPic1.png" />
+            </div>
             <div>
                 <form>
                     <span>
@@ -155,7 +160,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">موتور:</label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
                             readonly>{{motorInput}}</textarea>
                     </span>
                 </form>
@@ -165,7 +170,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">گیربکس: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
                             readonly>{{girboxInput}}</textarea>
                     </span>
                 </form>
@@ -175,7 +180,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">جلو بندی و تعلیق: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="80"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="80"
                             readonly>{{blockingAndSuspentionInput}}</textarea>
                     </span>
                 </form>
@@ -185,8 +190,8 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">آپشن ها: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
-                            readonly>{{options}}</textarea>                    
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
+                            readonly>{{options}}</textarea>
                     </span>
                 </form>
             </div>
@@ -195,7 +200,7 @@
                 <form>
                     <span>
                         <label for="explainationinput" class="bold">توضیحات: </label>
-                        <textarea id="explainationinput" name="explainationinput" rows="7" cols="80"
+                        <textarea id="explainationinput" name="explainationinput" rows="6" cols="80"
                             readonly>{{explaination}}</textarea>
                     </span>
                 </form>
@@ -210,6 +215,9 @@
             <!-- <div class="seperator"></div> -->
             <div>
                 <img src="blueprintPic.png" />
+            </div>
+            <div>
+                <img src="blueprintPic2.png" />
             </div>
         </div>
         <button onclick="window.print()">چاپ صفحه</button>

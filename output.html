@@ -32,8 +32,11 @@
             text-align: center;
         }
 
+        .header-img {
+            width: 100%;
+        }
+
         .main {
-            padding-top: 2.5cm;
             border: 1px solid rgb(97, 97, 97);
         }
 
@@ -44,7 +47,7 @@
             position: relative;
             margin: 0 1.5rem;
         }
-        
+
         .seperator::before {
             content: '';
             position: absolute;
@@ -84,7 +87,6 @@
 
         .bold {
             font-weight: bold;
-            ;
         }
 
         button {
@@ -122,31 +124,34 @@
 <body>
     <div class="container">
         <div class="main">
+            <div class="header">
+                <img class="header-img" src="blueprintPic1.png" />
+            </div>
             <div>
                 <form>
                     <span>
                         <label name="dateinput" class="bold">تاریخ: </label>
-                        <input class="short-input" for="dateinput" value="1403/08/04" readonly />
+                        <input class="short-input" for="dateinput" value="1403/08/05" readonly />
                     </span>
                     <span>
                         <label name="caridinput" class="bold">پلاک: </label>
-                        <input class="short-input" for="caridinput" value="234/56ش01" readonly />
+                        <input class="short-input" for="caridinput" value="565/20ی12" readonly />
                     </span>
                     <span>
                         <label name="shasinumberinput" class="bold">شماره شاسی: </label>
-                        <input class="short-input" for="shasinumberinput" value="55456" readonly />
+                        <input class="short-input" for="shasinumberinput" value="456" readonly />
                     </span>
                     <span>
                         <label name="cartypeinput" class="bold">نوع خودرو: </label>
-                        <input class="short-input" for="cartypeinput" value="405" readonly />
+                        <input class="short-input" for="cartypeinput" value="" readonly />
                     </span>
                     <span>
                         <label name="colorinput" class="bold">رنگ خوودرو: </label>
-                        <input class="short-input" for="colorinput" value="سبز لجنی" readonly />
+                        <input class="short-input" for="colorinput" value="" readonly />
                     </span>
                     <span>
                         <label name="carownerinput" class="bold">خانم / آقای: </label>
-                        <input class="short-input" for="carownerinput" value="خدیبریخرحسیرکمسیئرم" readonly />
+                        <input class="short-input" for="carownerinput" value="مخنختا" readonly />
                     </span>
                 </form>
             </div>
@@ -155,7 +160,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">موتور:</label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
                             readonly>موتور</textarea>
                     </span>
                 </form>
@@ -165,7 +170,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">گیربکس: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
                             readonly>گیربکس</textarea>
                     </span>
                 </form>
@@ -175,7 +180,7 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">جلو بندی و تعلیق: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="80"
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="80"
                             readonly>جلوبندی</textarea>
                     </span>
                 </form>
@@ -185,8 +190,8 @@
                 <form>
                     <span>
                         <label for="conditioninput" class="bold">آپشن ها: </label>
-                        <textarea id="conditioninput" name="conditioninput" rows="7" cols="85"
-                            readonly>آپشن</textarea>                    
+                        <textarea id="conditioninput" name="conditioninput" rows="6" cols="85"
+                            readonly>آپشن</textarea>
                     </span>
                 </form>
             </div>
@@ -195,7 +200,7 @@
                 <form>
                     <span>
                         <label for="explainationinput" class="bold">توضیحات: </label>
-                        <textarea id="explainationinput" name="explainationinput" rows="7" cols="80"
+                        <textarea id="explainationinput" name="explainationinput" rows="6" cols="80"
                             readonly>توضیحات</textarea>
                     </span>
                 </form>
@@ -210,6 +215,9 @@
             <!-- <div class="seperator"></div> -->
             <div>
                 <img src="blueprintPic.png" />
+            </div>
+            <div>
+                <img src="blueprintPic2.png" />
             </div>
         </div>
         <button onclick="window.print()">چاپ صفحه</button>
